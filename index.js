@@ -345,12 +345,49 @@
 
 // eg of syntax errors
 
-console.log();
+// console.log();
 
-const str1 = "apple";
+// const str1 = "apple";
 
 
-// runtime errors
-console.log(multiply());
+// // runtime errors
+// console.log(multiply());
 
-const plus = num1 + num2;
+// const plus = num1 + num2;
+
+
+
+// try catch
+
+// try {
+//     const result = 10 / 0; 
+//     console.log(result); 
+//   } catch (error) {
+//     console.log("error occurred:",error.message);
+//   }
+
+
+//   try {
+//     const value = nonExistentVariable;
+//   } catch (error) {
+//     console.log("error occurred:",error.message);
+//   }
+  
+
+// try catch finally 
+
+const divide = (a, b) => {
+  try {
+    if (b === 0) {
+      throw new Error("/ by zero is not allowed.");
+    }
+    return a / b;
+  } catch (error) {
+    console.error("error : ", error.message);
+  } finally {
+    console.log("try catch block finished");
+  }
+}
+
+console.log(divide(10, 2));
+console.log(divide(10, 0));
